@@ -1,11 +1,10 @@
 import React from 'react'
-import.meta.env.VITE_GITHUB_TOKEN
-
+import.meta.env.VITE_TEST_VAR
 export default function Home() {
     return (
         <div>
             <h1 className="text-6xl text-yellow-400 ">Welcome to Home Page</h1>
-            {import.meta.env.VITE_GITHUB_TOKEN}
+            {process.env.VITE_GITHUB_TOKEN}
         </div>
     )
 }
