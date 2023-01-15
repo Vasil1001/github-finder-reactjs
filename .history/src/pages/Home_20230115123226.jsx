@@ -8,7 +8,7 @@ export default function Home() {
         <div>
             <h1 className="text-5xl text-yellow-400 pb-12 text-center">Welcome to <b>GitHub Find!a</b></h1>
             
-            <UserSearch />
+            {/* SEARCH COMPONENT */}
             <UserResults />
             
         </div>
