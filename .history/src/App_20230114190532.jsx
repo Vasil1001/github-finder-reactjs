@@ -13,7 +13,7 @@ function App() {
   return (
     <GithubProvider>
       <Router>
-        <div className="flex flex-col justify-between h-screen text-white bg-[#1a1b1e]">
+        <div className="flex flex-col justify-between text-white bg-[#1a1b1e]">
           <Navbar />
 
           <main className='container mx-auto px-3 pb-12 '>
