@@ -24,5 +24,3 @@ dist-ssr
 *.sln
 *.sw?
 *.env
-.history/.env_20230115023521
-.history/.gitignore_20230115023532
