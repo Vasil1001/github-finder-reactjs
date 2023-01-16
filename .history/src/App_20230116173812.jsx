@@ -8,6 +8,8 @@ import NotFound from './pages/NotFound'
 import { GithubProvider } from './context/github/GithubContext'
 
 function App() {
+  const [count, setCount] = useState(0)
+
   return (
     <GithubProvider>
       <Router>

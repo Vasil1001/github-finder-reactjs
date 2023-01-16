@@ -8,10 +8,12 @@ import NotFound from './pages/NotFound'
 import { GithubProvider } from './context/github/GithubContext'
 
 function App() {
+  const [count, setCount] = useState(0)
+
   return (
     <GithubProvider>
       <Router>
-        <div className="flex flex-col justify-between h-screen text-white bg-[#1a1b1e]">
+        <div className="flex flex-col justify-between h-screen text-white bg-[#2c3244]">
           <Navbar />
 
           <main className='container mx-auto px-3 pb-12 '>
