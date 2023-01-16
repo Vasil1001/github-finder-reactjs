@@ -12,14 +12,14 @@ export default function UserSearch() {
                         <div className="form-control">
                             <div className="relative">
                                 <input type="text"
-                                    className='w-full pr-40 bg-gray-200 input input-lg text-black rounded-2xl '
+                                    className='w-full pr-40 bg-gray-200 input input-lg text-black rounded-1xl '
                                     placeholder='Search'
                                     value={text}
                                     onChange={handleChange}
 
                                 />
 
-                                <button type='submit' className="absolute top-0 right-0 rounded-l-none rounded-r-xl w-36 btn btn-lg" style={{borderTopRightRadius: '0.8rem', borderBottomRightRadius: '0.8rem'}}>Go</button>
+                                <button type='submit' className="absolute top-0 right-0 rounded-l-none rounded-r-2xl w-36 btn btn-lg">Go</button>
                             </div>
                         </div>
                     </form>

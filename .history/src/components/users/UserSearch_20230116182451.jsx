@@ -19,7 +19,7 @@ export default function UserSearch() {
 
                                 />
 
-                                <button type='submit' className="absolute top-0 right-0 rounded-l-none rounded-r-xl w-36 btn btn-lg" style={{borderTopRightRadius: '0.8rem', borderBottomRightRadius: '0.8rem'}}>Go</button>
+                                <button type='submit' className="absolute top-0 right-0  rounded-r-2xl w-36 btn btn-lg">Go</button>
                             </div>
                         </div>
                     </form>
