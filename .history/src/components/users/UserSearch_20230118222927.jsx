@@ -1,11 +1,10 @@
 import React, { useState, useContext } from 'react'
-import GithubContext from '../../context/github/GithubContext'
 
 export default function UserSearch() {
     const [text, setText] = useState('')
-    const { users, searchUsers } = useContext(GithubContext)
-    const handleChange = (e) => setText(e.target.value)
 
+    const handleChange = (e) => setText(e.target.value)
+<GithubContext></GithubContext>
     const handleSubmit = (e) => {
         e.preventDefault()
 
@@ -13,8 +12,6 @@ export default function UserSearch() {
             alert('Please enter a GitHub user')
         } else {
             // todo - search users
-            searchUsers(text)
-            setText('')
         }
     }
 
@@ -42,12 +39,9 @@ export default function UserSearch() {
 
 
             </div>
-
             <div>
                 <button className="btn btn-ghost btg-lg rounded-xl">Clear</button>
             </div>
-
-
         </div>
     )
 }

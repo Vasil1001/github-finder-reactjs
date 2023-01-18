@@ -27,11 +27,11 @@ export const GithubProvider = ({ children }) => {
             }
         })
 
-        const {items} = await response.json()
+        const [data] = await response.json()
 
         dispatch({
             type: 'GET_USERS',
-            payload: items,
+            payload: data,
         })
     }
     // Set loading
@@ -41,7 +41,7 @@ export const GithubProvider = ({ children }) => {
         value={{
             users: state.users,
             loading: state.loading,
-            searchUsers,
+            fetchUsers,
         }}>
 
         {children}

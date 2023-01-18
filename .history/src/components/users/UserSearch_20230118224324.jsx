@@ -14,7 +14,6 @@ export default function UserSearch() {
         } else {
             // todo - search users
             searchUsers(text)
-            setText('')
         }
     }
 
@@ -42,11 +41,11 @@ export default function UserSearch() {
 
 
             </div>
-
-            <div>
-                <button className="btn btn-ghost btg-lg rounded-xl">Clear</button>
-            </div>
-
+            {users.length > 0 && (
+                <div>
+                    <button className="btn btn-ghost btg-lg rounded-xl">Clear</button>
+                </div>
+            )}
 
         </div>
     )

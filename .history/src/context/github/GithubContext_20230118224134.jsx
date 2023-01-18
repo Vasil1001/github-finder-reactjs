@@ -21,17 +21,17 @@ export const GithubProvider = ({ children }) => {
         const params = new URLSearchParams({
             q: text
         })
-        const response = await fetch(`${GITHUB_URL}/search/users?${params}`, {
+        const response = await fetch(`${GITHUB_URL}/search/users`, {
             headers: {
                 Authorization: `token ${GITHUB_TOKEN}`
             }
         })
 
-        const {items} = await response.json()
+        const data = await response.json()
 
         dispatch({
             type: 'GET_USERS',
-            payload: items,
+            payload: data,
         })
     }
     // Set loading
@@ -41,7 +41,7 @@ export const GithubProvider = ({ children }) => {
         value={{
             users: state.users,
             loading: state.loading,
-            searchUsers,
+            fetchUsers,
         }}>
 
         {children}
