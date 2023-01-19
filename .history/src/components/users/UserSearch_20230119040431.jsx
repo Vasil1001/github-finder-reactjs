@@ -42,12 +42,10 @@ export default function UserSearch() {
 
 
             </div>
-            {users.length > 0 && (
-                <div>
-                    <button className="btn btn-ghost btg-lg rounded-xl">Clear</button>
-                </div>
-            )}
-
+            {users.length >}
+            <div>
+                <button className="btn btn-ghost btg-lg rounded-xl">Clear</button>
+            </div>
 
 
         </div>

@@ -34,7 +34,7 @@ export default function UserSearch() {
 
                                 />
 
-                                <button type='submit' className="absolute top-0 right-0 text-white rounded-l-none rounded-r-xl w-36 btn btn-primary btn-lg" style={{ borderTopRightRadius: '0.92rem', borderBottomRightRadius: '0.92rem' }}>Go</button>
+                                <button type='submit' className="absolute top-0 right-0 text-white rounded-l-none rounded-r-xl w-36 btn btn-primary btn-lg" style={{ borderTopRightRadius: '0.9rem', borderBottomRightRadius: '0.8rem' }}>Go</button>
                             </div>
                         </div>
                     </form>
@@ -42,12 +42,10 @@ export default function UserSearch() {
 
 
             </div>
-            {users.length > 0 && (
-                <div>
-                    <button className="btn btn-ghost btg-lg rounded-xl">Clear</button>
-                </div>
-            )}
 
+            <div>
+                <button className="btn btn-ghost btg-lg rounded-xl">Clear</button>
+            </div>
 
 
         </div>
