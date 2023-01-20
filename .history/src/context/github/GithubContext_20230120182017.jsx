@@ -9,7 +9,7 @@ const GITHUB_TOKEN = import.meta.env.VITE_GITHUB_TOKEN
 export const GithubProvider = ({ children }) => {
     const initialState = {
         users: [],
-        user: {},
+        user,
         loading: false
     }
 
@@ -28,39 +28,16 @@ export const GithubProvider = ({ children }) => {
             }
         })
 
-        const { items } = await response.json()
+        const {items} = await response.json()
 
         dispatch({
             type: 'GET_USERS',
             payload: items,
         })
     }
-
-    // GET single user 
-    const getUser = async (login) => {
-        setLoading()
-
-        const response = await fetch(`${GITHUB_URL}/users/${login}`, {
-            headers: {
-                Authorization: `token ${GITHUB_TOKEN}`
-            }
-        })
-
-        if (response.status === 404) {
-            window.location = '/notfound'
-        } else {
-            const data = await response.json()
-
-            dispatch({
-                type: 'GET_USER',
-                payload: data,
-            })
-        }
-
-    }
-
+    
     // Clear users from state
-    const clearUsers = () => dispatch({ type: "CLEAR_USERS" })
+    const clearUsers = () => dispatch({type:"CLEAR_USERS"})
     // Set loading
     const setLoading = () => dispatch({ type: 'SET_LOADING' })
 
@@ -68,8 +45,6 @@ export const GithubProvider = ({ children }) => {
         value={{
             users: state.users,
             loading: state.loading,
-            user: state.user,
-            getUser,
             searchUsers,
             clearUsers,
         }}>

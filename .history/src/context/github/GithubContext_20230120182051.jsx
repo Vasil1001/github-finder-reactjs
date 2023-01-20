@@ -36,27 +36,25 @@ export const GithubProvider = ({ children }) => {
         })
     }
 
-    // GET single user 
-    const getUser = async (login) => {
+    // GET search results
+    const searchUsers = async (text) => {
         setLoading()
 
-        const response = await fetch(`${GITHUB_URL}/users/${login}`, {
+        const params = new URLSearchParams({
+            q: text
+        })
+        const response = await fetch(`${GITHUB_URL}/search/users?${params}`, {
             headers: {
                 Authorization: `token ${GITHUB_TOKEN}`
             }
         })
 
-        if (response.status === 404) {
-            window.location = '/notfound'
-        } else {
-            const data = await response.json()
+        const { items } = await response.json()
 
-            dispatch({
-                type: 'GET_USER',
-                payload: data,
-            })
-        }
-
+        dispatch({
+            type: 'GET_USERS',
+            payload: items,
+        })
     }
 
     // Clear users from state
@@ -68,8 +66,7 @@ export const GithubProvider = ({ children }) => {
         value={{
             users: state.users,
             loading: state.loading,
-            user: state.user,
-            getUser,
+            user: state.user
             searchUsers,
             clearUsers,
         }}>

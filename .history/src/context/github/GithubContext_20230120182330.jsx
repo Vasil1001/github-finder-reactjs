@@ -53,7 +53,7 @@ export const GithubProvider = ({ children }) => {
 
             dispatch({
                 type: 'GET_USER',
-                payload: data,
+                payload: items,
             })
         }
 
@@ -68,8 +68,7 @@ export const GithubProvider = ({ children }) => {
         value={{
             users: state.users,
             loading: state.loading,
-            user: state.user,
-            getUser,
+            user: state.user
             searchUsers,
             clearUsers,
         }}>
