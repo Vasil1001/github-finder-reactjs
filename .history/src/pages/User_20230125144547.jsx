@@ -124,7 +124,7 @@ export default function User() {
             <div className="w-full py-5 mb-6 rounded-lg shadow-md stats bg-neutral">
                 <div className="stat">
                     <div className="stat-figure text-secondary">
-                        <FaUsers className="text-3xl md:text-5xl text-[#ff9301]" />
+                        <FaUsers className="text-3xl md:text-5xl text-[#2a8275]" />
                     </div>
                     <div className="stat-title pr-5">
                         Followers
@@ -136,7 +136,7 @@ export default function User() {
 
                 <div className="stat">
                     <div className="stat-figure text-secondary">
-                        <FaUserFriends className="text-3xl md:text-5xl text-[#ff9301]" />
+                        <FaUserFriends className="text-3xl md:text-5xl" />
                     </div>
                     <div className="stat-title pr-5">
                         Following
@@ -148,7 +148,7 @@ export default function User() {
 
                 <div className="stat">
                     <div className="stat-figure text-secondary">
-                        <FaCodepen className="text-3xl md:text-5xl text-[#ff9301]" />
+                        <FaCodepen className="text-3xl md:text-5xl" />
                     </div>
                     <div className="stat-title pr-5">
                         Public Repos
@@ -160,7 +160,7 @@ export default function User() {
 
                 <div className="stat  ">
                     <div className="stat-figure text-secondary">
-                        <FaStore className="text-3xl md:text-5xl text-[#ff9301]" />
+                        <FaStore className="text-3xl md:text-5xl" />
                     </div>
                     <div className="stat-title pr-5">
                         Public Gists

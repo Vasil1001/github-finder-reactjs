@@ -3,7 +3,7 @@ import React from 'react'
 export default function About() {
     return (
         
-        <div className='container p-6 bg-neutral rounded-lg '>
+        <div className='container p-6 bg-[#27292f] rounded-lg '>
             <h1 className='text-6xl mb-4'>Github Finder</h1>
             <p className='mb-4 text-2xl font-light'>
                 A React app to search GitHub profiles and see profile details. This

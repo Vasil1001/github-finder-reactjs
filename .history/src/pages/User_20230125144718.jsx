@@ -135,8 +135,8 @@ export default function User() {
                 </div>
 
                 <div className="stat">
-                    <div className="stat-figure text-secondary">
-                        <FaUserFriends className="text-3xl md:text-5xl text-[#ff9301]" />
+                    <div className="stat-figure text-secondary">f7024d
+                        <FaUserFriends className="text-3xl md:text-5xl text-[#f7024d]" />
                     </div>
                     <div className="stat-title pr-5">
                         Following
@@ -148,7 +148,7 @@ export default function User() {
 
                 <div className="stat">
                     <div className="stat-figure text-secondary">
-                        <FaCodepen className="text-3xl md:text-5xl text-[#ff9301]" />
+                        <FaCodepen className="text-3xl md:text-5xl text-[#f7024d]" />
                     </div>
                     <div className="stat-title pr-5">
                         Public Repos
@@ -160,7 +160,7 @@ export default function User() {
 
                 <div className="stat  ">
                     <div className="stat-figure text-secondary">
-                        <FaStore className="text-3xl md:text-5xl text-[#ff9301]" />
+                        <FaStore className="text-3xl md:text-5xl text-[#f7024d]" />
                     </div>
                     <div className="stat-title pr-5">
                         Public Gists
