@@ -1,3 +1,4 @@
+import { createClientSideURL } from '@remix-run/router/dist/history'
 import React, { createContext, useReducer } from 'react'
 import githubReducer from './GithubReducer'
 
@@ -64,11 +65,11 @@ export const GithubProvider = ({ children }) => {
         setLoading()
 
         const params = new URLSearchParams({
-            sort: 'created',
-            per_page: 10
+            sort: created,
+            
         })
 
-        const response = await fetch(`${GITHUB_URL}/users/${login}/repos?${params}`, {
+        const response = await fetch(`${GITHUB_URL}/users/${login}/repos`, {
             headers: {
                 Authorization: `token ${GITHUB_TOKEN}`
             }

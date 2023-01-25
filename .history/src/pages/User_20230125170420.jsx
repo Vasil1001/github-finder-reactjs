@@ -123,7 +123,7 @@ export default function User() {
                 </div>
             </div>
 
-            <div className="w-full py-5 mb-6 rounded-lg shadow-lg stats bg-neutral">
+            <div className="w-full py-5 mb-6 rounded-lg shadow-lgstats bg-neutral">
                 <div className="stat">
                     <div className="stat-figure text-secondary">
                         <FaUsers className="text-3xl md:text-5xl text-[#ff9301]" />

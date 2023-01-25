@@ -64,11 +64,10 @@ export const GithubProvider = ({ children }) => {
         setLoading()
 
         const params = new URLSearchParams({
-            sort: 'created',
-            per_page: 10
+            q: text
         })
-
-        const response = await fetch(`${GITHUB_URL}/users/${login}/repos?${params}`, {
+        
+        const response = await fetch(`${GITHUB_URL}/users/${login}/repos`, {
             headers: {
                 Authorization: `token ${GITHUB_TOKEN}`
             }
