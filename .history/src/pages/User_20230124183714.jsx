@@ -160,13 +160,13 @@ export default function User() {
 
                 <div className="stat">
                     <div className="stat-figure text-secondary">
-                        <FaStore className="text-3xl md:text-5xl" />
+                        <FaCodepen className="text-3xl md:text-5xl" />
                     </div>
                     <div className="stat-title pr-5">
-                        Public Gists
+                        Public Repos
                     </div>
                     <div className="stat-value pr-5 text-3xl md:text-4xl">
-                        {public_gists}
+                        {public_repos}
                     </div>
                 </div>
             </div>

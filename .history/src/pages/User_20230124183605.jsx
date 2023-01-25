@@ -127,7 +127,7 @@ export default function User() {
                         <FaUsers className="text-3xl md:text-5xl" />
                     </div>
                     <div className="stat-title pr-5">
-                        Followers
+                            Followers
                     </div>
                     <div className="stat-value pr-5 text-3xl md:text-4xl">
                         {followers}
@@ -136,37 +136,13 @@ export default function User() {
 
                 <div className="stat">
                     <div className="stat-figure text-secondary">
-                        <FaUserFriends className="text-3xl md:text-5xl" />
+                        <FaUsers className="text-3xl md:text-5xl" />
                     </div>
                     <div className="stat-title pr-5">
-                        Following
+                            Followers
                     </div>
                     <div className="stat-value pr-5 text-3xl md:text-4xl">
-                        {following}
-                    </div>
-                </div>
-
-                <div className="stat">
-                    <div className="stat-figure text-secondary">
-                        <FaCodepen className="text-3xl md:text-5xl" />
-                    </div>
-                    <div className="stat-title pr-5">
-                        Public Repos
-                    </div>
-                    <div className="stat-value pr-5 text-3xl md:text-4xl">
-                        {public_repos}
-                    </div>
-                </div>
-
-                <div className="stat">
-                    <div className="stat-figure text-secondary">
-                        <FaStore className="text-3xl md:text-5xl" />
-                    </div>
-                    <div className="stat-title pr-5">
-                        Public Gists
-                    </div>
-                    <div className="stat-value pr-5 text-3xl md:text-4xl">
-                        {public_gists}
+                        {followers}
                     </div>
                 </div>
             </div>
