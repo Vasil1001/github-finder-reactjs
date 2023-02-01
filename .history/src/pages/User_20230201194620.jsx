@@ -8,7 +8,14 @@ import RepoList from '../components/repos/RepoList'
 import { getUser, getUserRepos } from '../context/github/GithubActions'
 
 export default function User() {
-    const { repos, user, loading, dispatch } = useContext(GithubContext)
+    // 1. Import the context
+import GithubContext from '../context/github/githubContext';
+
+// 2. Import the use context hook
+import { useContext } from 'react';
+
+// 3. Call the context
+const githubContext = useContext(GithubContext);
     const params = useParams()
     
     useEffect(() => {
@@ -26,7 +33,7 @@ export default function User() {
 
         // Call getUserData
         getUserData()
-    }, [dispatch, params.login])
+    }, [])
 
     const {
         name,

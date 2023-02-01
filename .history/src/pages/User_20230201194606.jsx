@@ -9,6 +9,11 @@ import { getUser, getUserRepos } from '../context/github/GithubActions'
 
 export default function User() {
     const { repos, user, loading, dispatch } = useContext(GithubContext)
+// This is used to create a context, for a global state.
+// The context uses a reducer, to handle state changes.
+// The reducer, is used to update the state, based on the action passed.
+
+const { repos, user, loading, dispatch } = useContext(GithubContext)
     const params = useParams()
     
     useEffect(() => {
@@ -26,7 +31,7 @@ export default function User() {
 
         // Call getUserData
         getUserData()
-    }, [dispatch, params.login])
+    }, [])
 
     const {
         name,

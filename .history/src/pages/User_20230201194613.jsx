@@ -8,7 +8,12 @@ import RepoList from '../components/repos/RepoList'
 import { getUser, getUserRepos } from '../context/github/GithubActions'
 
 export default function User() {
-    const { repos, user, loading, dispatch } = useContext(GithubContext)
+    // Load user profile and repos
+useEffect(() => {
+  if (repos === null && user === null) {
+    dispatch(loadUser())
+  }
+}, [repos, user]) // eslint-disable-line
     const params = useParams()
     
     useEffect(() => {
@@ -26,7 +31,7 @@ export default function User() {
 
         // Call getUserData
         getUserData()
-    }, [dispatch, params.login])
+    }, [])
 
     const {
         name,

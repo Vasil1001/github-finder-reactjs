@@ -26,7 +26,12 @@ export default function User() {
 
         // Call getUserData
         getUserData()
-    }, [dispatch, params.login])
+
+        // This is the important part
+        return () => dispatch({ type: 'CLEAR_USER' })
+    }, [])
+
+    }, [])
 
     const {
         name,

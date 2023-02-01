@@ -49,6 +49,7 @@ export default function UserSearch() {
             {users.length > 0 && (
                 <div>
                     <button onClick={() => dispatch({ type: 'CLEAR_USERS' })}>Clear</button>
+                     
                 </div>
             )}
         </div>

@@ -18,6 +18,7 @@ export const GithubProvider = ({ children }) => {
             ...state,
             dispatch,
         }}>
+
         {children}
     </GithubContext.Provider>
 }

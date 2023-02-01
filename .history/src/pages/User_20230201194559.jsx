@@ -8,7 +8,7 @@ import RepoList from '../components/repos/RepoList'
 import { getUser, getUserRepos } from '../context/github/GithubActions'
 
 export default function User() {
-    const { repos, user, loading, dispatch } = useContext(GithubContext)
+    const { repositories, user, loading, dispatch } = useContext(GithubContext)
     const params = useParams()
     
     useEffect(() => {
@@ -26,7 +26,7 @@ export default function User() {
 
         // Call getUserData
         getUserData()
-    }, [dispatch, params.login])
+    }, [])
 
     const {
         name,

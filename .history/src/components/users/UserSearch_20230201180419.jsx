@@ -5,7 +5,7 @@ import {searchUsers} from '../../context/github/GithubActions'
 
 export default function UserSearch() {
     const [text, setText] = useState('')
-    const { users, dispatch } = useContext(GithubContext)
+    const { users, dispatch, clearUsers } = useContext(GithubContext)
     const { setAlert } = useContext(AlertContext)
 
     const handleChange = (e) => setText(e.target.value)
@@ -23,6 +23,51 @@ export default function UserSearch() {
 
             setText('')
         }
+    }
+
+    // GET single user 
+    const getUser = async (login) => {
+        setLoading()
+
+        const response = await fetch(`${GITHUB_URL}/users/${login}`, {
+            headers: {
+                Authorization: `token ${GITHUB_TOKEN}`
+            }
+        })
+
+        if (response.status === 404) {
+            window.location = '/notfound'
+        } else {
+            const data = await response.json()
+
+            dispatch({
+                type: 'GET_USER',
+                payload: data,
+            })
+        }
+    }
+
+    // GET user repos from account
+    const getUserRepos = async (login) => {
+        setLoading()
+
+        const params = new URLSearchParams({
+            sort: 'created',
+            per_page: 10
+        })
+
+        const response = await fetch(`${GITHUB_URL}/users/${login}/repos?${params}`, {
+            headers: {
+                Authorization: `token ${GITHUB_TOKEN}`
+            }
+        })
+
+        const data = await response.json()
+
+        dispatch({
+            type: 'GET_REPOS',
+            payload: data,
+        })
     }
 
     return (
@@ -48,7 +93,7 @@ export default function UserSearch() {
             </div>
             {users.length > 0 && (
                 <div>
-                    <button onClick={() => dispatch({ type: 'CLEAR_USERS' })}>Clear</button>
+                    <button onClick={clearUsers} className="btn btn-ghost mb-2 btg-lg rounded-xl justify-baseline mt-5">Clear</button>
                 </div>
             )}
         </div>

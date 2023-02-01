@@ -26,7 +26,7 @@ export default function User() {
 
         // Call getUserData
         getUserData()
-    }, [dispatch, params.login])
+    }, [])
 
     const {
         name,

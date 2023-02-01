@@ -9,24 +9,13 @@ import { getUser, getUserRepos } from '../context/github/GithubActions'
 
 export default function User() {
     const { repos, user, loading, dispatch } = useContext(GithubContext)
+
     const params = useParams()
-    
-    useEffect(() => {
-        // Set loading to true
-        dispatch({ type: 'SET_LOADING' })
+    const getUser = async (username) => {
+    const response = await axios.get(`https://api.github.com/users/${username}`)
+    return response.data
+}
 
-        // Function to get user data and user repo data
-        const getUserData = async () => {
-            const userData = await getUser(params.login)
-            dispatch({ type: 'GET_USER', payload: userData })
-
-            const userRepoData = await getUserRepos(params.login)
-            dispatch({ type: 'GET_REPOS', payload: userRepoData })
-        }
-
-        // Call getUserData
-        getUserData()
-    }, [dispatch, params.login])
 
     const {
         name,

@@ -9,8 +9,8 @@ import { getUser, getUserRepos } from '../context/github/GithubActions'
 
 export default function User() {
     const { repos, user, loading, dispatch } = useContext(GithubContext)
+
     const params = useParams()
-    
     useEffect(() => {
         // Set loading to true
         dispatch({ type: 'SET_LOADING' })
@@ -26,7 +26,7 @@ export default function User() {
 
         // Call getUserData
         getUserData()
-    }, [dispatch, params.login])
+    }, [])
 
     const {
         name,
