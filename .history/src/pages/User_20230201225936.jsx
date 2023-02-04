@@ -5,7 +5,7 @@ import { FaCodepen, FaStore, FaUserFriends, FaUsers } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import Spinner from '../components/layout/Spinner'
 import RepoList from '../components/repos/RepoList'
-import { getUserAndRepos } from '../context/github/GithubActions'
+import { getUser, getUserRepos } from '../context/github/GithubActions'
 
 export default function User() {
     const { repos, user, loading, dispatch } = useContext(GithubContext)
@@ -17,8 +17,8 @@ export default function User() {
 
         // Function to get user data and user repo data
         const getUserData = async () => {
-            const userData = await getUserAndRepos(params.login)
-            dispatch({ type: 'GET_USER_AND_REPOS', payload: userData })
+            const userData = await getUser(params.login)
+            dispatch({ type: 'GET_USER', payload: userData })
 
             
         }

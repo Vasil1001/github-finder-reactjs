@@ -18,7 +18,7 @@ export default function User() {
         // Function to get user data and user repo data
         const getUserData = async () => {
             const userData = await getUserAndRepos(params.login)
-            dispatch({ type: 'GET_USER_AND_REPOS', payload: userData })
+            dispatch({ type: 'GET_USER_', payload: userData })
 
             
         }

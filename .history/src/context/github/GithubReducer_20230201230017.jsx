@@ -9,8 +9,7 @@ const githubReducer = (state, action) => {
         case 'GET_USER_AND_REPOS':
             return {
                 ...state,
-                user: action.payload.user,
-                repos: action.payload.repos,
+                user: action.payload,
                 loading: false
             }
         case 'SET_LOADING':
