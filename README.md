@@ -1,7 +1,7 @@
 # GitHub Finder
 Project 2. A React + Tailwind + DaisyUI app.
 
-React app to search Github profiles. This app uses the Context API along with the useContext and useReducer hooks for state management and is part of the "Modern React Front To Back" Udemy course, Project 2.
+React app to search Github profiles. This app uses the Context API along with the useContext and useReducer hooks for state management and is part of the "Modern React Front To Back 2022" Udemy course, Project 2.
 Link to app: https://meals-nutrition-tracker.netlify.app/
 
 [![React][React.js]][React-url]
