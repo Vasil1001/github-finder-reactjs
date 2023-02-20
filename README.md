@@ -34,7 +34,7 @@ Link to app: https://meals-nutrition-tracker.netlify.app/
 
 <!-- general-info -->
 ## General Info
-- This is a udemy course project to learn more in depth React concepts .
+- This is a udemy course project to learn more in depth React concepts.
 - Users can type a username in the search bar, and select a profile to view statistics.
 
 ## Learning Outcomes
