@@ -5,7 +5,7 @@ const GITHUB_TOKEN = import.meta.env.VITE_GITHUB_TOKEN
 
 const github = axios.create({
     baseURL: "https:/api.github.com",
-    headers: { Authorization: `token ${"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"}` }
+    headers: { Authorization: `token ${GITHUB_TOKEN}` }
     
 })
 // * GET search results
@@ -13,7 +13,7 @@ export const searchUsers = async (text) => {
     const params = new URLSearchParams({
         q: text
     })
-    const response = await axios(`https:/api.github.com/search/users?${params}`)
+    const response = await github.get(`/search/users?${params}`)
     return response.data.items
 }
 

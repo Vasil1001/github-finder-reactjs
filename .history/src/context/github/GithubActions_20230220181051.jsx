@@ -13,7 +13,7 @@ export const searchUsers = async (text) => {
     const params = new URLSearchParams({
         q: text
     })
-    const response = await axios(`https:/api.github.com/search/users?${params}`)
+    const response = await axios(`/search/users?${params}`)
     return response.data.items
 }
 
