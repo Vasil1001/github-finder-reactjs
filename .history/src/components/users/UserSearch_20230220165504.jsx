@@ -15,7 +15,6 @@ export default function UserSearch() {
         if (text === '') {
             setAlert('Please enter a GitHub user', 'error')
         } else {
-            
             // todo - search users
             dispatch({ type: 'SET_LOADING' })
             const users = searchUsers(text)
