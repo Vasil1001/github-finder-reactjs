@@ -1,4 +1,3 @@
-
 import axios from "axios"
 
 const GITHUB_URL = import.meta.env.VITE_GITHUB_URL
@@ -26,3 +25,4 @@ export const getUserAndRepos = async (login) => {
     ])
     return { user: user.data, repos: repos.data }
 }
+
