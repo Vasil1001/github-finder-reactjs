@@ -15,6 +15,7 @@ export default function UserSearch() {
         if (text === '') {
             setAlert('Please enter a GitHub user', 'error')
         } else {
+
             // todo - search users
             searchUsers(text)
             setText('')

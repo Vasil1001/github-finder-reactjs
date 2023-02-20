@@ -16,6 +16,10 @@ export default function UserSearch() {
             setAlert('Please enter a GitHub user', 'error')
         } else {
             // todo - search users
+            dispatch({ type: 'SET_LOADING' })
+            const users = await searchUsers(text)
+            dispatch({ type: 'GET_USERS', payload: users })
+
             searchUsers(text)
             setText('')
         }
