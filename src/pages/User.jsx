@@ -5,13 +5,17 @@ import { FaCodepen, FaStore, FaUserFriends, FaUsers } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import Spinner from '../components/layout/Spinner'
 import RepoList from '../components/repos/RepoList'
+<<<<<<< HEAD
 import { getUserAndRepos } from '../context/github/GithubActions'
+=======
+>>>>>>> parent of 6958b21 (Context functions moved to GithubActions)
 
 export default function User() {
-    const { repos, user, loading, dispatch } = useContext(GithubContext)
+    const { getUser, getUserRepos, repos, user, loading } = useContext(GithubContext)
+
     const params = useParams()
-    
     useEffect(() => {
+<<<<<<< HEAD
         // Set loading to true
         dispatch({ type: 'SET_LOADING' })
 
@@ -26,6 +30,11 @@ export default function User() {
         // Call getUserData
         getUserData()
     }, [dispatch, params.login])
+=======
+        getUser(params.login)
+        getUserRepos(params.login)
+    }, [])
+>>>>>>> parent of 6958b21 (Context functions moved to GithubActions)
 
     const {
         name,
@@ -185,7 +194,7 @@ export default function User() {
                 </div>
             </div>
 
-            <RepoList
+            <RepoList 
                 repos={repos}
             />
         </div>
