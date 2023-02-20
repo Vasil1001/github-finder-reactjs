@@ -1,4 +1,4 @@
-# GitHub Finder
+# GitHub Finder - react.js
 A React + Vite + Tailwind + DaisyUI app.
 
 Project 2 of the 'React Front to Back 2022' Udemy course. 
