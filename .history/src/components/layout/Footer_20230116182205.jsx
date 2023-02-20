@@ -4,7 +4,7 @@ export default function Footer() {
     const footerYear = new Date().getFullYear()
 
     return (
-
+<<<<<<< HEAD
         <footer className='footer p-10 bg-[#1a1b1e] text-[#2a8275] footer-center'>
 
             <div>

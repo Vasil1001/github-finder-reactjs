@@ -4,11 +4,8 @@ export default function Footer() {
     const footerYear = new Date().getFullYear()
 
     return (
-
-        <footer className='footer p-10 bg-[#1a1b1e] text-[#2a8275] footer-center'>
-
+        <footer className="footer p-10 bg-stone-800 text-primary-content footer-center">
             <div>
-                
                 <svg
                     width='50'
                     height='50'
