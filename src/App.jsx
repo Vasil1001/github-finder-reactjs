@@ -10,8 +10,6 @@ import User from './pages/User'
 import { GithubProvider } from './context/github/GithubContext'
 import { AlertProvider } from './context/alert/AlertContext'
 
-
-
 function App() {
   return (
     <GithubProvider>
