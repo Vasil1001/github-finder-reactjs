@@ -37,7 +37,7 @@ Link to app: [https://github-finder-react-tw.netlify.app/](https://github-finder
 
 ## General Info
 
-- This is a udemy course project to learn concepts.
+- This is a udemy course project to learn React concepts.
 - Users can type a username in the search bar, and select a profile to view statistics.
 
 ## Learning Outcomes
